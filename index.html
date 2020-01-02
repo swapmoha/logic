@@ -1,0 +1,114 @@
+<script>
+    // print 1 to 100 numbers 
+    for(i=0; i<=100; i++) {
+        console.log(i);
+    } 
+ // print 100 to 0
+    for (i = 100; i>=0; i--) {
+        console.log(i);
+    }
+ // even number and odd no
+
+ for(i = 1; i<=100; i++) {
+     if(i%2 === 0) {
+        console.log('it is a even number' + i);
+     } else {
+        console.log('it is a odd number' + i);
+     }
+ }
+
+ // reverse a string
+    var a = 'tanmay';
+    for(i = a.length; i>=0; i--) {
+        console.log(a[i]);
+    }
+//swap number using third vairable
+
+var a = 10;
+
+ var b = 20;
+
+ var c = a;
+
+var a = b ;
+
+var b = c;
+
+console.log(a , b);
+
+//swap number without using third vairable
+
+var a = 10;
+
+var b = 20;
+
+var a = a + b; 
+
+var b = a - b ; 
+
+var a = a - b; 
+
+console.log(a , b);
+
+// duplicate value remove
+   // when u call index of  that element is not found
+    // it will give -1
+    // https://www.youtube.com/watch?v=dvPybpgk5Y4&t=306s
+var arr = [1,22,33,11,22,11,22,33,44,44,22,55,55,66,99];
+var arr2 = [];
+for(var i = 0; i<arr.length; i++) {
+ 
+    if(arr2.indexOf(arr[i]) === -1) {
+        arr2.push(arr[i]);
+    }
+}
+arr2.sort(function(a , b) {
+    return b - a;
+})
+console.log(arr2);
+
+// object have key and value
+// key always unique
+var arr = [1,22,33,11,22,11,22,33,44,44,22,55,55,66,99];
+
+obj = {}; 
+for(i=0; i<arr.length; i++) {
+    obj[arr[i]] = true;
+}
+var b = Object.keys(obj);
+console.log(b);
+
+ // before strting occurance first understand the below logic
+ // if a key key value is equal to undefiend then push it
+        var obj = { a: 24, b: 15 };
+        if (obj['d'] === undefined) {
+
+            obj['d'] = 30;
+        }
+        console.log(obj);
+
+        var str = 'Dattu';
+        var occurance = {};
+        var len = str.length;
+        var ch;
+
+        for(var  i = 0; i< len; i++) {
+            ch = str[i]; // str[i] is chrachter index strore in ch
+        //    var  occurance = {
+        //        D : 'undeiend'
+        //        then D : 1
+
+        //        if D : 1 then D ++
+        //    }
+            if(occurance[ch] === undefined) {
+                occurance[ch] = 1;
+            }
+            else {
+                occurance[ch]++;
+            }
+        }
+
+        for(ch in occurance) {
+            console.log(ch + '========>' + occurance[ch]);
+        }
+</script>
